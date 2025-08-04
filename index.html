@@ -12,24 +12,28 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
             overflow: hidden;
             position: relative;
+            background-color: #f0f0f0; /* Light background for better contrast */
         }
         img {
-            width: 600px;
+            width: 90vw; /* Scales with viewport width */
+            max-width: 600px; /* Caps width for desktop */
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
             z-index: 1;
             position: relative;
         }
         .text-container {
-            width: 600px;
+            width: 90vw;
+            max-width: 600px;
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 16px;
+            margin-bottom: 1.5rem;
+            font-size: 1rem; /* Responsive font size */
             line-height: 1.5;
+            padding: 0 1rem; /* Padding for mobile */
             z-index: 1;
             position: relative;
         }
@@ -37,18 +41,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 1rem;
             z-index: 1;
             position: relative;
+            width: 90vw;
+            max-width: 600px;
         }
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
             cursor: pointer;
             border: none;
             color: white;
             border-radius: 5px;
-            width: 600px;
+            width: 100%; /* Matches container width */
             text-align: center;
         }
         .red-btn {
@@ -62,7 +68,7 @@
         }
         .money {
             position: absolute;
-            font-size: 24px;
+            font-size: 1.5rem; /* Slightly smaller for mobile */
             user-select: none;
             animation: fall linear infinite;
             z-index: 0;
@@ -77,13 +83,21 @@
                 opacity: 0.5;
             }
         }
+        @media (max-width: 600px) {
+            .text-container {
+                font-size: 0.9rem; /* Smaller font for mobile */
+            }
+            button {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRGQEp7SZCI77Mxjt-1ahKO4Q5oG-gQg_vxXDHMHRio6COCQnNE0hEploqVfFYd2315H9IeYC-XGmb10iTnL2lbHmq3KttRd0mIs1nQ3zM00ylHP0AQylAnT-i502KnOW-_1d7HslQcMYuKudPrnohHAWv5CiFTLIYdKopQUHWouqwMu0_oa_qttteuHs/s100/for%20bitcotask.jpg" alt="Landing Page Image">
     <div class="text-container">
-        A dereferer is a webpage that is used to redirect users to different websites. Usually, web browsers send small pieces of information when following a link, including a so-called "referer"
-        .
+        A dereferer is a webpage that is used to redirect users to different websites. Usually, web browsers send small pieces of information when following a link, including a so-called "referer". The referer is the URL of the page the user came from, giving webmasters the option to track back the origin of users visiting their sites. The dereferer's part is to suppress this information; when analysing their transfer logs, webmasters will track back to the dereferer's URL instead of the original URL.
     </div>
     <div class="button-container">
         <button class="red-btn" onclick="window.location.href='https://www.google.com'">Google</button>
